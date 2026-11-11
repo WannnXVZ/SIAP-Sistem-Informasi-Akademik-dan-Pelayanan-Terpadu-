@@ -3,28 +3,19 @@
 import React, { useState } from "react";
 import { User, BeasiswaProgram, PendaftaranBeasiswa, ScholarshipMatchResult } from "@/lib/types";
 import { 
-  GraduationCap, 
   Sparkles, 
   Clock, 
-  FileCheck2, 
   Award, 
   CheckCircle2, 
   AlertTriangle, 
   FileText, 
-  TrendingUp, 
   ShieldCheck, 
-  Users, 
-  DollarSign, 
   ExternalLink,
-  ChevronRight,
-  Eye,
   Check,
   X,
   Sliders,
   Calendar,
-  Layers,
   ArrowRight,
-  Zap,
   Target
 } from "lucide-react";
 

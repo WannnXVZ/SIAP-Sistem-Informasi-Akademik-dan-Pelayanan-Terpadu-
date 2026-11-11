@@ -1,24 +1,19 @@
 "use client";
 
 import React, { useState } from "react";
-import { User, UserRole, PengaduanTiket, PengaduanStatus } from "@/lib/types";
+import { User, PengaduanTiket, PengaduanStatus } from "@/lib/types";
 import { 
   MessageSquareWarning, 
   ShieldCheck, 
   ShieldAlert, 
   EyeOff, 
-  Clock, 
   CheckCircle2, 
   Send, 
   PlusCircle, 
-  Filter, 
-  ChevronRight, 
   Star, 
   RefreshCw, 
-  Paperclip,
   Lock,
   Tag,
-  AlertTriangle,
   Building2
 } from "lucide-react";
 

@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { NotifikasiItem } from "@/lib/types";
 import { 
   Bell, 
-  CheckCheck, 
   X, 
   ExternalLink, 
   Clock, 
@@ -13,8 +12,7 @@ import {
   FileText, 
   Briefcase, 
   MessageSquareWarning, 
-  Award,
-  Layers
+  Award
 } from "lucide-react";
 
 interface NotifikasiModalProps {

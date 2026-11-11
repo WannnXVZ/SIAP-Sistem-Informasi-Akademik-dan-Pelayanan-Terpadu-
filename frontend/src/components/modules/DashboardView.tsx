@@ -10,19 +10,11 @@ import {
   Sparkles, 
   ArrowUpRight, 
   Calendar, 
-  Clock, 
-  CheckCircle2, 
-  AlertTriangle,
-  Award,
   BookOpen,
-  Users,
-  Building2,
   TrendingUp,
   ShieldCheck,
-  BarChart3,
   CheckCheck,
   ChevronRight,
-  Shield,
   Layers,
   FileSpreadsheet
 } from 'lucide-react';
@@ -45,7 +37,6 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
   lowonganList,
   lamaranList,
   pengaduanList,
-  beasiswaList,
   onNavigate,
 }) => {
   const role = currentUser.activeRole;

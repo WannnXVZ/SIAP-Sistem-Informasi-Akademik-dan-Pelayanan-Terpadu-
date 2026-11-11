@@ -4,24 +4,16 @@ import React, { useState } from 'react';
 import { User, PengajuanLayanan, LayananStatus } from '@/lib/types';
 import { 
   FileText, 
-  Clock, 
   CheckCircle2, 
-  AlertCircle, 
-  MapPin, 
   Download, 
   Plus, 
   Search,
-  Filter,
-  ArrowRight,
   ShieldCheck,
   Building,
   QrCode,
-  Printer,
-  ChevronRight,
   Check,
   X,
   FileCheck2,
-  Calendar,
   AlertTriangle
 } from 'lucide-react';
 
@@ -53,8 +45,6 @@ export const LayananView: React.FC<LayananViewProps> = ({
   const [jenisLayananId, setJenisLayananId] = useState<string>('srv-aktif-kuliah');
   const [keperluan, setKeperluan] = useState<string>('');
   const [metodePenyerahan, setMetodePenyerahan] = useState<'DIGITAL' | 'FISIK' | 'KEDUANYA'>('KEDUANYA');
-  const [catatanRevisiInput, setCatatanRevisiInput] = useState<string>('');
-  const [nomorSuratResmiInput, setNomorSuratResmiInput] = useState<string>('B/452/PL7/KM.01/2026');
   const [feedbackMsg, setFeedbackMsg] = useState<string | null>(null);
 
   const layananCatalog = [
@@ -104,7 +94,7 @@ export const LayananView: React.FC<LayananViewProps> = ({
     setTimeout(() => setFeedbackMsg(null), 4500);
   };
 
-  const handleUpdateStatusStaf = (id: string, newStatus: LayananStatus, extraInfo?: any) => {
+  const handleUpdateStatusStaf = (id: string, newStatus: LayananStatus, extraInfo?: { catatan?: string }) => {
     const updated = pengajuanList.map(item => {
       if (item.id === id) {
         return {
@@ -536,14 +526,14 @@ export const LayananView: React.FC<LayananViewProps> = ({
                 Metode Penyerahan Dokumen:
               </label>
               <div className="grid grid-cols-3 gap-3">
-                {[
+                {([
                   { id: 'DIGITAL', label: 'Digital (PDF)', desc: 'Unduh langsung via portal' },
                   { id: 'FISIK', label: 'Fisik (Cetak)', desc: 'Ambil di Loket No. 03' },
                   { id: 'KEDUANYA', label: 'Keduanya (Rekomendasi)', desc: 'File digital + Ambil cetak' },
-                ].map(m => (
+                ] as const).map(m => (
                   <div
                     key={m.id}
-                    onClick={() => setMetodePenyerahan(m.id as any)}
+                    onClick={() => setMetodePenyerahan(m.id)}
                     className={`p-3 rounded-xl border cursor-pointer transition-all text-center ${
                       metodePenyerahan === m.id
                         ? 'bg-blue-50 dark:bg-blue-950/40 border-blue-500 text-blue-900 dark:text-blue-200 font-bold'

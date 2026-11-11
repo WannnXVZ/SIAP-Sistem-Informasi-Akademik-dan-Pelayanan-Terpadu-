@@ -6,12 +6,8 @@ import { MOCK_LOGBOOK_MAGANG } from '@/lib/mockData';
 import { 
   Briefcase, 
   MapPin, 
-  Clock, 
   CheckCircle2, 
   Search, 
-  Filter, 
-  UserCheck, 
-  Calendar, 
   Video, 
   Building,
   Eye,
@@ -20,15 +16,10 @@ import {
   Plus,
   BookOpen,
   Award,
-  Sparkles,
   ChevronRight,
   ExternalLink,
-  Lock,
   EyeOff,
-  Check,
   X,
-  FileCheck2,
-  AlertCircle,
   ShieldCheck
 } from 'lucide-react';
 
@@ -78,7 +69,7 @@ export const MagangView: React.FC<MagangViewProps> = ({
   // Mitra Post Job Modal
   const [showNewJobModal, setShowNewJobModal] = useState<boolean>(false);
   const [newJobJudul, setNewJobJudul] = useState<string>('');
-  const [newJobBidang, setNewJobBidang] = useState<string>('Software Engineering');
+  const [newJobBidang] = useState<string>('Software Engineering');
   const [newJobMode, setNewJobMode] = useState<'Onsite' | 'Remote' | 'Hybrid'>('Hybrid');
   const [newJobKuota, setNewJobKuota] = useState<number>(3);
   const [newJobTunjangan, setNewJobTunjangan] = useState<string>('Rp 2.500.000 / bulan + Uang Transport');
@@ -130,7 +121,7 @@ export const MagangView: React.FC<MagangViewProps> = ({
     setTimeout(() => setFeedbackMsg(null), 4500);
   };
 
-  const handleUpdateStatusKandidat = (lamaranId: string, status: LamaranMagang['status'], extra?: any) => {
+  const handleUpdateStatusKandidat = (lamaranId: string, status: LamaranMagang['status'], extra?: { catatan?: string }) => {
     const updated = lamaranList.map(lmr => {
       if (lmr.id === lamaranId) {
         return {
@@ -349,7 +340,7 @@ export const MagangView: React.FC<MagangViewProps> = ({
             <div className="flex items-center gap-2">
               <select
                 value={filterMode}
-                onChange={(e) => setFilterMode(e.target.value as any)}
+                onChange={(e) => setFilterMode(e.target.value as 'SEMUA' | 'Onsite' | 'Remote' | 'Hybrid')}
                 className="px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xs font-bold text-slate-700 dark:text-slate-300"
               >
                 <option value="SEMUA">Semua Mode Kerja</option>
@@ -1103,7 +1094,7 @@ export const MagangView: React.FC<MagangViewProps> = ({
                   <label className="font-bold text-slate-600">Mode Kerja:</label>
                   <select
                     value={newJobMode}
-                    onChange={(e) => setNewJobMode(e.target.value as any)}
+                    onChange={(e) => setNewJobMode(e.target.value as 'Onsite' | 'Remote' | 'Hybrid')}
                     className="w-full p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900"
                   >
                     <option value="Hybrid">Hybrid</option>

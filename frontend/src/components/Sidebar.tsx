@@ -11,8 +11,6 @@ import {
   Sparkles, 
   History, 
   Bell,
-  CheckCircle,
-  HelpCircle,
   BookOpen
 } from 'lucide-react';
 

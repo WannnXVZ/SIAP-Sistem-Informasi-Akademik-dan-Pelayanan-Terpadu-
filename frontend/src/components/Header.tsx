@@ -6,14 +6,7 @@ import {
   Bell, 
   Sun, 
   Moon, 
-  ShieldCheck, 
   UserCheck, 
-  GraduationCap, 
-  Briefcase, 
-  FileText, 
-  AlertCircle, 
-  Award,
-  CheckCircle2,
   Clock
 } from 'lucide-react';
 

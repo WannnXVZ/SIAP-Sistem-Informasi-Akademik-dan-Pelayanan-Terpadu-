@@ -4,17 +4,11 @@ import React, { useState } from "react";
 import { User, AuditLogItem } from "@/lib/types";
 import { 
   ShieldCheck, 
-  History, 
   Search, 
-  Filter, 
-  Terminal, 
-  Lock, 
   FileSpreadsheet, 
   Clock, 
   Laptop, 
-  UserCheck,
-  CheckCircle2,
-  Database
+  UserCheck
 } from "lucide-react";
 
 interface AuditViewProps {
@@ -22,7 +16,7 @@ interface AuditViewProps {
   auditLogs: AuditLogItem[];
 }
 
-export default function AuditView({ currentUser, auditLogs }: AuditViewProps) {
+export default function AuditView({ auditLogs }: AuditViewProps) {
   const [searchTerm, setSearchTerm] = useState("");
   const [filterRole, setFilterRole] = useState("SEMUA");
   const [filterEntity, setFilterEntity] = useState("SEMUA");

@@ -6,11 +6,9 @@ import { MOCK_ADVISEES_KRS } from '@/lib/mockData';
 import { 
   GraduationCap, 
   CheckCircle2, 
-  AlertCircle, 
   FileSpreadsheet, 
   Upload, 
   Download, 
-  Clock, 
   Trash2, 
   Plus, 
   ArrowRight,
@@ -19,13 +17,9 @@ import {
   AlertTriangle,
   FileCheck,
   Search,
-  Filter,
-  Users,
   Printer,
-  CheckCheck,
   ShieldCheck,
   Sliders,
-  Sparkles,
   Lock,
   Unlock,
   Building
@@ -73,7 +67,6 @@ export const AkademikView: React.FC<AkademikViewProps> = ({
   ]);
 
   // Class roster grading state for Dosen Pengampu
-  const [selectedClassId, setSelectedClassId] = useState<string>('kls-1');
   const [classStudents, setClassStudents] = useState([
     { nim: '230102001', nama: 'Muhammad Arief Irawan', tugas: 85, uts: 88, uas: 90 },
     { nim: '230102015', nama: 'Siti Nurhaliza', tugas: 82, uts: 85, uas: 88 },
@@ -437,7 +430,7 @@ export const AkademikView: React.FC<AkademikViewProps> = ({
                 </div>
                 <select
                   value={filterJenis}
-                  onChange={(e) => setFilterJenis(e.target.value as any)}
+                  onChange={(e) => setFilterJenis(e.target.value as 'SEMUA' | 'Wajib' | 'Pilihan')}
                   className="px-2.5 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xs text-slate-700 dark:text-slate-300 font-medium"
                 >
                   <option value="SEMUA">Semua Jenis</option>

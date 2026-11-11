@@ -17,7 +17,6 @@ import AuditView from "@/components/modules/AuditView";
 // Types & Mock Data
 import {
   User,
-  UserRole,
   KrsRecord,
   PengajuanLayanan,
   LowonganMagang,
@@ -43,7 +42,7 @@ import {
   MOCK_AUDIT_LOGS,
 } from "@/lib/mockData";
 
-import { CheckCircle2, Info, X } from "lucide-react";
+import { CheckCircle2, X } from "lucide-react";
 
 export default function Home() {
   // Current active user & role simulation
@@ -67,7 +66,7 @@ export default function Home() {
   const [lowonganList, setLowonganList] = useState<LowonganMagang[]>(MOCK_LOWONGAN);
   const [lamaranList, setLamaranList] = useState<LamaranMagang[]>(MOCK_LAMARAN);
   const [pengaduanList, setPengaduanList] = useState<PengaduanTiket[]>(MOCK_PENGADUAN);
-  const [beasiswaList, setBeasiswaList] = useState<BeasiswaProgram[]>(MOCK_BEASISWA);
+  const [beasiswaList] = useState<BeasiswaProgram[]>(MOCK_BEASISWA);
   const [pendaftaranBeasiswaList, setPendaftaranBeasiswaList] = useState<PendaftaranBeasiswa[]>([
     MOCK_PENDAFTARAN_BEASISWA,
   ]);
