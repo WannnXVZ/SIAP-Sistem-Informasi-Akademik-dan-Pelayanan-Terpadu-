@@ -2,9 +2,9 @@
 # Panduan Eksekusi Teknis dari Awal (Day 0) hingga Siap Demo & Production
 
 > **Dokumen Terkait:**
-> - [PRD_SIAP_Lengkap.md](file:///c:/Antigravity/Project/Hackathon/PRD_SIAP_Lengkap.md) — Product Requirements Document
-> - [SIAP_PRD_Designed.html](file:///c:/Antigravity/Project/Hackathon/SIAP_PRD_Designed.html) — PRD Visual Interactive View
-> - [IMPLEMENTATION_PLAN_SIAP.md](file:///c:/Antigravity/Project/Hackathon/IMPLEMENTATION_PLAN_SIAP.md) — Master Technical Architecture Blueprint
+> - [PRD_SIAP_Lengkap.md](PRD_SIAP_Lengkap.md) — Product Requirements Document
+> - [SIAP_PRD_Designed.html](SIAP_PRD_Designed.html) — PRD Visual Interactive View
+> - [IMPLEMENTATION_PLAN_SIAP.md](IMPLEMENTATION_PLAN_SIAP.md) — Master Technical Architecture Blueprint
 
 ---
 
@@ -221,7 +221,7 @@ gantt
 Untuk memulai pengerjaan secara konkret di workspace ini, langkah pertama yang disarankan:
 
 1. **Inisialisasi Project Scaffolding**:
-   Membuat fondasi aplikasi web Next.js di workspace `c:\Antigravity\Project\Hackathon`.
+   Membuat fondasi aplikasi web Next.js di workspace proyek ini (`frontend/`).
 2. **Setup Skema Database & Mock Provider**:
    Membuat data model untuk User, Mahasiswa, Dosen, Kelas, Layanan, Magang, dan Beasiswa.
 3. **Membangun Shell Antarmuka Pertama**:

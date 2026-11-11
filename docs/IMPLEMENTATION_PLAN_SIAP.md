@@ -1,7 +1,7 @@
 # DOKUMEN RENCANA IMPLEMENTASI SISTEM (SYSTEM IMPLEMENTATION PLAN)
 # SIAP — Sistem Informasi Akademik & Pelayanan POLNES
 
-> **Dokumen Rujukan:** [PRD_SIAP_Lengkap.md](file:///c:/Antigravity/Project/Hackathon/PRD_SIAP_Lengkap.md) & [SIAP_PRD_Designed.html](file:///c:/Antigravity/Project/Hackathon/SIAP_PRD_Designed.html)  
+> **Dokumen Rujukan:** [PRD_SIAP_Lengkap.md](PRD_SIAP_Lengkap.md) & [SIAP_PRD_Designed.html](SIAP_PRD_Designed.html)  
 > **Target Sistem:** Platform Terintegrasi SIAKAD & Layanan Mahasiswa POLNES  
 > **Penyusun:** Senior Product Manager, Lead Software Architect, & System Analyst  
 > **Status Dokumen:** Master Implementation Blueprint (Production Ready)  
@@ -51,7 +51,7 @@
 ## 1. EKSEKUTIF ANALISIS PRD
 
 ### 1.1 Kekuatan dan Cakupan Spesifikasi PRD
-Berdasarkan telaah mendalam terhadap [PRD_SIAP_Lengkap.md](file:///c:/Antigravity/Project/Hackathon/PRD_SIAP_Lengkap.md):
+Berdasarkan telaah mendalam terhadap [PRD_SIAP_Lengkap.md](PRD_SIAP_Lengkap.md):
 1. **Kejelasan Domain Bisnis**: PRD memecah sistem ke dalam 6 modul fungsional utama (Akademik, Layanan Administrasi, Magang, Pengaduan, Beasiswa Cerdas, Notifikasi Terintegrasi) ditambah Platform Core.
 2. **Kekayaan Aturan Bisnis (Business Rules)**: Terdapat 72 aturan bisnis terperinci (`BR-001` s/d `BR-072`) yang menetapkan logika validasi atomik, seperti batas SKS dinamis (`BR-011`), mode import nilai all-or-nothing (`BR-023`), hak retensi data pribadi (`BR-044`), dan perhitungan slack deadline beasiswa (`BR-068`).
 3. **Desain Data yang Terstruktur**: Skema basis data pada Bab 14 telah menetapkan relasi hingga level 3NF dengan integritas referensial ketat, pemisahan UUID publik untuk mitigasi *ID Enumeration Attack*, serta audit log terstruktur (`audit_logs`).

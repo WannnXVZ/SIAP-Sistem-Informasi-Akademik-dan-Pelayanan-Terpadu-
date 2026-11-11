@@ -5,8 +5,8 @@ Layanan Application Programming Interface (API) & Worker Platform SIAP Politekni
 Arsitektur yang digunakan adalah **Modular Monolith (Domain-Driven)** dengan basis Laravel 11 (PHP 8.3) / Node.js Microservices, PostgreSQL 16 sebagai primary database, Redis 7 untuk background job queue & caching, serta MinIO untuk penyimpanan berkas privat.
 
 Dokumentasi lengkap spesifikasi API dan arsitektur database dapat dilihat di:
-- [docs/PRD_SIAP_Lengkap.md (Bab 14 & 15)](file:///c:/Antigravity/Project/Hackathon/docs/PRD_SIAP_Lengkap.md)
-- [docs/IMPLEMENTATION_PLAN_SIAP.md (Bab 2)](file:///c:/Antigravity/Project/Hackathon/docs/IMPLEMENTATION_PLAN_SIAP.md)
+- [docs/PRD_SIAP_Lengkap.md (Bab 14 & 15)](../docs/PRD_SIAP_Lengkap.md)
+- [docs/IMPLEMENTATION_PLAN_SIAP.md (Bab 2)](../docs/IMPLEMENTATION_PLAN_SIAP.md)
 
 ---
 
